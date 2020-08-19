@@ -24,6 +24,6 @@ end
 end
 
 hi = CashRegister.new(5)
-hi.add_item("computer", 1000)
-hi.apply_discount
+#hi.add_item("computer", 1000)
+#hi.apply_discount
 puts hi.total
