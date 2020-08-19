@@ -21,5 +21,7 @@ def apply_discount
   end
 end
 
+end
+
 hi = CashRegister.new(5)
 puts hi.total
