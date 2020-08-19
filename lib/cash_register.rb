@@ -11,7 +11,14 @@ def add_item(title, price, quantity = 1)
   @total += (price * quantity) #* (@discount / 100)
 end
 
-
+def apply_discount
+  if @discount == 0
+    return "There is no discount to apply."
+  else  
+    reducedtotal = @total *  (@discount / 100)
+    @total = reducedtotal
+    return "After the discount, the total comes to $#{reducedtotal}."
+  end
 end
 
 hi = CashRegister.new(5)
