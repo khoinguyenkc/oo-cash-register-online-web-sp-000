@@ -16,9 +16,9 @@ def apply_discount
   if @discount == 0
     return "There is no discount to apply."
   else
-    reducedtotal = @total *  (@discount / 100)
+    discountamount = @total *  (@discount / 100)
     binding.pry
-    @total = reducedtotal
+    @total -= discountamount
     return "After the discount, the total comes to $#{reducedtotal}."
   end
 end
