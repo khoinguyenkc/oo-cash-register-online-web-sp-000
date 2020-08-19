@@ -9,5 +9,5 @@ end
 
 end
 
-hi = Cash.new(5)
+hi = CashRegister.new(5)
 puts hi.discount
