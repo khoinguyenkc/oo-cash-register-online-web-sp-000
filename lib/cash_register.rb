@@ -1,3 +1,4 @@
+require 'pry'
 class CashRegister
 attr_accessor :discount, :total
 def initialize(discount = 0)
@@ -8,7 +9,9 @@ end
 
 def add_item(title, price, quantity = 1)
   @items << title
-  @total += (price * quantity) #* (@discount / 100)
+  x = (price * quantity)
+  binding.pry
+  @total += x #* (@discount / 100)
 end
 
 def apply_discount
