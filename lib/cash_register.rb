@@ -9,7 +9,7 @@ end
 
 def add_item(title, price, quantity = 1)
   @total += (price * quantity) #* (@discount / 100)
-  @items << title if !@items.include?(title)
+  @items << title #they want repeats. 
 end
 
 def apply_discount
