@@ -8,7 +8,7 @@ end
 
 def add_item(title, price, quantity = 1)
   @items << title
-  @total += (price * quantity) * (@discount / 100)
+  @total += (price * quantity) #* (@discount / 100)
 end
 
 
