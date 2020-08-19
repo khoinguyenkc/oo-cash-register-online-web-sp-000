@@ -8,3 +8,6 @@ end
 
 
 end
+
+hi = Cash.new
+puts hi.total
