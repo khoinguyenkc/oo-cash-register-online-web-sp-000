@@ -18,7 +18,7 @@ def apply_discount
   else
     #ruby rounds up results if it's integers... a mess
     discountamount = @total *  (@discount.to_f / 100)
-    binding.pry
+    #binding.pry
     @total -= discountamount
     return "After the discount, the total comes to $#{@total}."
   end
