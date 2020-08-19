@@ -9,7 +9,8 @@ end
 
 def add_item(title, price, quantity = 1)
   @total += (price * quantity) #* (@discount / 100)
-  @lasttransactionamount = price
+  @lasttransactionamount = (price * quantity)
+  @lasttransactionquantity = quantity
   quantity.times do
   @items << title #they want repeats.
   end
@@ -34,12 +35,15 @@ def items
 end
 
 def void_last_transaction
-  #voids the last item. even if u add 3 tomatoes at a time with add_item, it only removes one tomato
+  #voids the last trnsaction not item.  if u add 3 tomatoes at a time with add_item, it removes 3 tomatoes
   #also it doesnt refund any discount amount you may have.. highly unrealistic
   #this makes use of a variable that keeps track of the last transaction's amount
   #ideally we keep track of ALL amounts but this is a simple cash register
-  @items.pop
+
   @total -= @lasttransactionamount
+  @lasttransactionquantity.times do
+    @items.pop
+  end
 end
 
 
