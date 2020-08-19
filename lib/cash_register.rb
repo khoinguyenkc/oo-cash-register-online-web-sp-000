@@ -9,7 +9,7 @@ end
 
 def add_item(title, price, quantity = 1)
   @items << title
-  #x = 
+  #x =
   #binding.pry
   @total += (price * quantity) #* (@discount / 100)
 end
