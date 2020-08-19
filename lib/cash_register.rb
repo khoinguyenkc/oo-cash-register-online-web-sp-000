@@ -10,4 +10,4 @@ end
 end
 
 hi = CashRegister.new(5)
-puts hi.discount
+puts hi.total
